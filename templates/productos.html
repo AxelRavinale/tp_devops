@@ -1,0 +1,29 @@
+{% extends 'template_base.html' %}
+
+{% block title %}
+    PERSONAS
+{% endblock %}
+
+{% block content %}
+    <table>
+        <thead>
+            <tr>
+                <th>Codigo</th>
+                <th>Nombre</th>
+                <th>Precio</th>
+                <th>Cantidad</th>
+                <th><a href="/productos_add">Agregar Productos</th>
+            </tr>
+        </thead>
+        <tbody>
+        {%for user in listado%}
+            <tr>
+                <td>{{user.cod}}</td>
+                <td>{{user.name}}</td>
+                <td>{{user.monto}}</td>
+                <td>{{user.cant}}</td>
+            </tr>
+        {%endfor%}
+        </tbody>
+    </table>
+{% endblock %}
